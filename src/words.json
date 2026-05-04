@@ -1,0 +1,63 @@
+{
+  "categories": [
+    {
+      "name": "Foods & Drinks",
+      "words": [
+        { "word": "Hoppers (Appa)", "hints": ["Bowl-shaped pancakes", "Crispy edges with a soft center", "Often eaten with an egg in the middle"] },
+        { "word": "String Hoppers", "hints": ["Steamed nests of rice flour noodles", "Best served with Kiri Hodi", "Pressed through a small mold"] },
+        { "word": "Watalappan", "hints": ["Spiced coconut custard", "Made with jaggery and eggs", "Commonly served during festivals like Eid"] },
+        { "word": "Lamprais", "hints": ["Dutch Burgher influenced dish", "Wrapped and baked in a banana leaf", "Contains frikkadels and special rice"] },
+        { "word": "Woodapple Juice", "hints": ["A thick, brown fruit drink", "Has a very hard outer shell", "Often mixed with coconut milk and sugar"] },
+        { "word": "Coffee", "hints": ["Dark caffeinated drink", "Brewed from roasted beans", "Often enjoyed with milk and sugar"] },
+        { "word": "Tea", "hints": ["World-famous Ceylon export", "Brewed from leaves in hot water", "Nuvara Eliya is a famous region for this"] },
+        { "word": "Sushi", "hints": ["Japanese origin", "Made with vinegared rice", "Often features raw fish or seaweed"] },
+        { "word": "Burger", "hints": ["Patty inside a bun", "Common fast food item", "Often served with fries"] }
+      ]
+    },
+    {
+      "name": "Sinhala Special",
+      "words": [
+        { "word": "Tuk Tuk (Three-Wheel)", "hints": ["A noisy three-wheeled taxi", "Very common on Colombo roads", "Has a meter and a rain cover"] },
+        { "word": "Sigiriya", "hints": ["An ancient rock fortress", "Features the 'Lion's Paw' entrance", "Known for its beautiful frescoes"] },
+        { "word": "දළදා මාළිගාව (Temple of the Tooth)", "hints": ["Located in Kandy", "Houses a sacred religious relic", "A centerpiece of the Esala Perahera"] },
+        { "word": "පහන් පූජාව (Oil Lamp)", "hints": ["Used in temples for light", "Filled with coconut oil", "Traditional way to start an event"] },
+        { "word": "වන්ගෙඩිය (Mortar & Pestle)", "hints": ["Traditional kitchen tool", "Used to pound rice or spices", "Requires a heavy wooden stick"] },
+        { "word": "ගාල්ල කොටුව (Galle Fort)", "hints": ["A colonial fortification", "Known for its iconic lighthouse", "Built by the Portuguese and Dutch"] },
+        { "word": "අංගම්පොර (Angampora)", "hints": ["Traditional Sri Lankan martial art", "Uses pressure point attacks", "Includes weapons like the 'Ethunu Kaduwa'"] },
+        { "word": "බට්ටා (Batta)", "hints": ["Traditional hopscotch game", "Played by hopping through boxes", "Requires a flat stone to throw"] }
+      ]
+    },
+    {
+      "name": "Everyday Objects",
+      "words": [
+        { "word": "Laptop", "hints": ["Portable computer", "Has a trackpad and screen", "You are likely using it for WebStorm"] },
+        { "word": "Mirror", "hints": ["Reflective glass surface", "Found in bathrooms", "Shows you your own face"] },
+        { "word": "Bicycle", "hints": ["Two-wheeled vehicle", "Powered by pedals", "Has a chain and a bell"] },
+        { "word": "Television", "hints": ["Screen used for entertainment", "Controlled by a remote", "Used to watch news or movies"] },
+        { "word": "Credit Card", "hints": ["Small plastic card", "Used for digital payments", "Has a 16-digit number"] },
+        { "word": "Spectacles", "hints": ["Worn on the face", "Helps you see more clearly", "Contains two glass lenses"] }
+      ]
+    },
+    {
+      "name": "Animals",
+      "words": [
+        { "word": "Elephant", "hints": ["Largest land animal", "Has a long trunk and tusks", "Pinnawala is a famous place for them"] },
+        { "word": "Lion", "hints": ["The King of the Jungle", "Appears on the Sri Lankan national flag", "Males have a large mane"] },
+        { "word": "Leopard", "hints": ["Large spotted cat", "Yala National Park is famous for them", "Good at climbing trees"] },
+        { "word": "Peacock", "hints": ["Large bird with colorful feathers", "The male dances to attract a mate", "Often seen in dry zone jungles"] },
+        { "word": "Tiger", "hints": ["Large orange cat with black stripes", "Excellent swimmer", "Not found in the wild in Sri Lanka"] },
+        { "word": "Dolphin", "hints": ["Highly intelligent marine mammal", "Kalpitiya is a great spot to see them", "Lives in pods and jumps out of water"] }
+      ]
+    },
+    {
+      "name": "Movies & Characters",
+      "words": [
+        { "word": "Spider-Man", "hints": ["A hero who wears red and blue", "Bitten by a radioactive insect", "Lives in New York City"] },
+        { "word": "Harry Potter", "hints": ["The boy who lived", "Has a lightning bolt scar", "Uses a wand and an owl"] },
+        { "word": "Batman", "hints": ["A billionaire who fights crime", "Has a secret cave", "Does not have superpowers"] },
+        { "word": "Titanic", "hints": ["A famous unsinkable ship", "Hit an iceberg in 1912", "The subject of a 1997 movie"] },
+        { "word": "Shrek", "hints": ["A large green ogre", "Lives in a swamp", "Has a donkey as a best friend"] }
+      ]
+    }
+  ]
+}

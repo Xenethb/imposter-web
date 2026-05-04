@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@theme {
+    /* This tells Tailwind where to find your fonts if needed,
+       but standard sans will work automatically */
+}
+
+body {
+    @apply bg-gray-100 text-gray-900;
+    overscroll-behavior: none;
+}
