@@ -9,7 +9,7 @@ export default function App() {
     const [screen, setScreen] = useState(() => localStorage.getItem('game_screen') || 'setup');
     const [players, setPlayers] = useState(() => JSON.parse(localStorage.getItem('players')) || []);
 
-    // Hidden Logic State
+    // Hidden Logic State (Fairness Engine)
     const [lastSpecialRoles, setLastSpecialRoles] = useState(() => JSON.parse(localStorage.getItem('last_specials')) || []);
     const [pityCounters, setPityCounters] = useState(() => JSON.parse(localStorage.getItem('pity_counters')) || {});
     const [lockoutCounters, setLockoutCounters] = useState(() => JSON.parse(localStorage.getItem('lockout_counters')) || {});
@@ -51,6 +51,7 @@ export default function App() {
 
     const startGame = () => {
         if (players.length < 3) return alert("Add at least 3 players!");
+        if (selectedCategories.length === 0) return alert("Select at least one category!");
 
         // 1. Determine Mode
         let pickedMode = 'Normal';
@@ -61,21 +62,22 @@ export default function App() {
         } else if (toggles.troll && modeDice < 0.25) pickedMode = 'Troll';
         else if (toggles.doppel && modeDice < 0.25) pickedMode = 'Doppelganger';
 
-        // 2. Word Pick
+        // 2. Word Pick from Selected Categories
         const allWords = wordData.categories
             .filter(c => selectedCategories.includes(c.name))
             .flatMap(c => c.words);
+
+        if (allWords.length < 2) return alert("Not enough words in selected categories!");
+
         const secret = allWords[Math.floor(Math.random() * allWords.length)];
         const secretAlt = allWords.find(w => w.word !== secret.word) || secret;
 
-        // 3. FILTER POOL BASED ON LOCKOUTS
-        // Players with a lockoutCounter > 0 CANNOT be Imposter or Jester
+        // 3. Fairness Pool Logic
         const eligiblePlayers = players.filter(p => (lockoutCounters[p] || 0) === 0);
         const lockedPlayers = players.filter(p => (lockoutCounters[p] || 0) > 0);
 
         let specialPool = shuffleArray([...eligiblePlayers]);
 
-        // PITY CHECK: Priority for those who haven't been special for 8+ rounds
         const stalePlayers = eligiblePlayers.filter(p => (pityCounters[p] || 0) >= 8);
         if (stalePlayers.length > 0) {
             specialPool = [...shuffleArray(stalePlayers), ...specialPool.filter(p => !stalePlayers.includes(p))];
@@ -87,7 +89,7 @@ export default function App() {
 
         // Assign Imposters
         for (let i = 0; i < imposterCount; i++) {
-            const name = specialPool[i] || lockedPlayers[i]; // Fallback if somehow everyone is locked (rare)
+            const name = specialPool[i] || lockedPlayers[i];
             currentRoundSpecials.push(name);
             const idx = roles.findIndex(r => r.name === name);
             const rHint = secret.hints[Math.floor(Math.random() * secret.hints.length)];
@@ -106,28 +108,21 @@ export default function App() {
             roles[idx].hint = "Try to get voted out!";
         }
 
-        // 4. UPDATE HIDDEN TRACKERS
+        // Update Trackers
         const newPity = { ...pityCounters };
         const newLockout = { ...lockoutCounters };
         const newConsecutive = { ...consecutiveSpecials };
 
         players.forEach(p => {
-            const isSpecialThisRound = currentRoundSpecials.includes(p);
-            const wasSpecialLastRound = lastSpecialRoles.includes(p);
-
-            if (isSpecialThisRound) {
+            const isSpecial = currentRoundSpecials.includes(p);
+            const wasSpecialLast = lastSpecialRoles.includes(p);
+            if (isSpecial) {
                 newPity[p] = 0;
-                // If they were special last round AND this round, trigger lockout
-                if (wasSpecialLastRound) {
-                    newLockout[p] = 3;
-                    newConsecutive[p] = 0;
-                } else {
-                    newConsecutive[p] = 1;
-                }
+                if (wasSpecialLast) { newLockout[p] = 3; newConsecutive[p] = 0; }
+                else { newConsecutive[p] = 1; }
             } else {
                 newPity[p] = (newPity[p] || 0) + 1;
                 newConsecutive[p] = 0;
-                // Decrement lockout timer if they are currently locked out
                 if (newLockout[p] > 0) newLockout[p] -= 1;
             }
         });
@@ -137,7 +132,7 @@ export default function App() {
         setConsecutiveSpecials(newConsecutive);
         setLastSpecialRoles(currentRoundSpecials);
 
-        // Apply Mode Effects
+        // Apply Modes
         if (pickedMode === 'Troll') {
             roles = roles.map(r => {
                 const trollWord = allWords[Math.floor(Math.random() * allWords.length)];
@@ -170,6 +165,7 @@ export default function App() {
                 <div className="p-6 max-w-md mx-auto space-y-6 pb-28 select-none relative z-10">
                     <h1 className="text-4xl font-black text-center text-lime-600 italic uppercase drop-shadow-md">Imposter Who?</h1>
 
+                    {/* Players Section */}
                     <div className="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-sm border-2 border-gray-100 space-y-3">
                         <label className="text-xs font-bold text-gray-400 uppercase tracking-widest">Players ({players.length})</label>
                         <div className="flex gap-2">
@@ -185,6 +181,21 @@ export default function App() {
                         </div>
                     </div>
 
+                    {/* Categories Section */}
+                    <div className="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-sm border-2 border-gray-100">
+                        <label className="text-xs font-bold text-gray-400 uppercase mb-2 block tracking-widest">Categories</label>
+                        <div className="flex flex-wrap gap-2">
+                            {wordData.categories.map(c => (
+                                <button key={c.name}
+                                        onClick={() => setSelectedCategories(prev => prev.includes(c.name) ? prev.filter(x => x !== c.name) : [...prev, c.name])}
+                                        className={`px-4 py-2 rounded-xl border-2 transition-all text-xs font-black uppercase ${selectedCategories.includes(c.name) ? 'border-lime-400 bg-lime-50 text-lime-700' : 'border-gray-100 text-gray-400'}`}>
+                                    {c.name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Imposters Section */}
                     <div className="bg-white/80 backdrop-blur-sm p-4 rounded-2xl shadow-sm border-2 border-gray-100 flex justify-between items-center">
                         <span className="font-bold">Imposters</span>
                         <div className="flex items-center gap-4">
@@ -207,6 +218,7 @@ export default function App() {
                 </div>
             )}
 
+            {/* ... rest of the pass/discussion screens remain exactly as they were ... */}
             {screen === 'pass' && (
                 <div className="h-screen flex flex-col items-center justify-center p-6 text-center space-y-8 select-none touch-none relative z-10">
                     <div className="space-y-2">
