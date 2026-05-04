@@ -19,7 +19,26 @@
         { "word": "Chocolate", "hints": ["Sweet", "Brown", "Wrapped"] },
         { "word": "Ice Cream", "hints": ["Frozen", "Sweet", "Scoop"] },
         { "word": "Pol Roti", "hints": ["Flat", "Coconut", "Breakfast"] },
-        { "word": "Beer", "hints": ["Cold", "Alcohol", "Glass"] }
+        { "word": "Beer", "hints": ["Cold", "Alcohol", "Glass"] },
+        { "word": "Dhal Curry", "hints": ["Yellow", "Everyday", "Protein"] },
+        { "word": "Pittu", "hints": ["Cylindrical", "Steamed", "Flour"] },
+        { "word": "String Hoppers", "hints": ["Lacy", "Pressed", "Steamed"] },
+        { "word": "Lamprais", "hints": ["Wrapped", "Dutch influence", "Baked"] },
+        { "word": "Milk Toffee", "hints": ["Local sweet", "Sticky", "Milky"] },
+        { "word": "Coconut Sambol", "hints": ["Red", "Grated", "Side dish"] },
+        { "word": "Kola Kenda", "hints": ["Green", "Morning", "Medicinal"] },
+        { "word": "Roti", "hints": ["Flat", "Cooked on fire", "South Asian"] },
+        { "word": "Tacos", "hints": ["Mexican", "Folded", "Filling inside"] },
+        { "word": "Ramen", "hints": ["Noodles", "Japanese", "Hot broth"] },
+        { "word": "Fried Rice", "hints": ["Wok", "Mixed", "Grains"] },
+        { "word": "Doughnut", "hints": ["Ring-shaped", "Fried", "Glazed"] },
+        { "word": "Waffle", "hints": ["Grid pattern", "Breakfast", "Syrup"] },
+        { "word": "Smoothie", "hints": ["Blended", "Fruit", "Thick"] },
+        { "word": "Lemonade", "hints": ["Citrus", "Cold", "Summer"] },
+        { "word": "Milk Rice", "hints": ["Occasion", "White", "Sweet or savoury"] },
+        { "word": "Samosa", "hints": ["Triangular", "Fried", "Stuffed"] },
+        { "word": "Popcorn", "hints": ["Cinema", "Pops", "Light"] },
+        { "word": "Cheesecake", "hints": ["Creamy", "Dessert", "Baked"] }
       ]
     },
     {
@@ -39,7 +58,22 @@
         { "word": "බෙරය", "hints": ["Instrument", "Rhythm", "Traditional"] },
         { "word": "දඩයම", "hints": ["Action", "Forest", "Historical"] },
         { "word": "පෙරහැර", "hints": ["Parade", "Kandy", "Elephants"] },
-        { "word": "ලයිට් හවුස්", "hints": ["Coast", "Tall", "Light"] }
+        { "word": "ලයිට් හවුස්", "hints": ["Coast", "Tall", "Light"] },
+        { "word": "Adam's Peak", "hints": ["Pilgrimage", "Summit", "Footprint"] },
+        { "word": "Yala", "hints": ["Wildlife", "South", "Safari"] },
+        { "word": "Galle", "hints": ["South coast", "Colonial", "Cricket"] },
+        { "word": "Mirissa", "hints": ["Beach", "Whales", "South"] },
+        { "word": "Polonnaruwa", "hints": ["Ancient", "Ruins", "Kingdom"] },
+        { "word": "කිරිදළ", "hints": ["Offering", "White", "Religious"] },
+        { "word": "කොහොඹ", "hints": ["Tree", "Bitter", "Medicinal"] },
+        { "word": "සිංහ රාජාලිය", "hints": ["National", "Symbol", "Sword"] },
+        { "word": "ලිප", "hints": ["Cooking", "Wood fire", "Traditional"] },
+        { "word": "Colombo Fort", "hints": ["City", "Commerce", "Trains"] },
+        { "word": "Ella", "hints": ["Train ride", "Hills", "Scenic"] },
+        { "word": "කෙළි සෙල්ලම", "hints": ["Fun", "Childhood", "Group"] },
+        { "word": "රාජකීය", "hints": ["Royal", "Heritage", "Grand"] },
+        { "word": "Dambulla", "hints": ["Cave", "Paintings", "Buddhist"] },
+        { "word": "Nuwara Eliya", "hints": ["Cold", "Hills", "Tea country"] }
       ]
     },
     {
@@ -61,7 +95,25 @@
         { "word": "Soap", "hints": ["Clean", "Wash", "Scent"] },
         { "word": "Pillow", "hints": ["Bed", "Sleep", "Soft"] },
         { "word": "Calculator", "hints": ["Math", "Numbers", "Buttons"] },
-        { "word": "Flashlight", "hints": ["Light", "Dark", "Batteries"] }
+        { "word": "Flashlight", "hints": ["Light", "Dark", "Batteries"] },
+        { "word": "Scissors", "hints": ["Blades", "Cutting", "Handles"] },
+        { "word": "Candle", "hints": ["Flame", "Wax", "Melts slowly"] },
+        { "word": "Charger", "hints": ["Cable", "Power", "Daily need"] },
+        { "word": "Fan", "hints": ["Spinning", "Cooling", "Ceiling"] },
+        { "word": "Earphones", "hints": ["Audio", "Ears", "Cord or wireless"] },
+        { "word": "Notebook", "hints": ["Paper", "Writing", "Lines"] },
+        { "word": "Pen", "hints": ["Ink", "Writing", "Small"] },
+        { "word": "Ruler", "hints": ["Straight", "Measurement", "School"] },
+        { "word": "Alarm Clock", "hints": ["Morning", "Ring", "Bedside"] },
+        { "word": "Dustbin", "hints": ["Waste", "Round", "Lid"] },
+        { "word": "Bucket", "hints": ["Water", "Plastic", "Handle"] },
+        { "word": "Broom", "hints": ["Cleaning", "Floor", "Bristles"] },
+        { "word": "Stapler", "hints": ["Office", "Binds paper", "Click"] },
+        { "word": "Tape", "hints": ["Sticky", "Transparent", "Roll"] },
+        { "word": "Helmet", "hints": ["Safety", "Head", "Road"] },
+        { "word": "Lock", "hints": ["Metal", "Security", "Needs a key"] },
+        { "word": "Lighter", "hints": ["Flame", "Small", "Flick"] },
+        { "word": "Envelope", "hints": ["Paper", "Post", "Sealed"] }
       ]
     },
     {
@@ -82,7 +134,23 @@
         { "word": "Kangaroo", "hints": ["Jump", "Pouch", "Nature"] },
         { "word": "Shark", "hints": ["Sea", "Fin", "Predator"] },
         { "word": "Ant", "hints": ["Small", "Group", "Ground"] },
-        { "word": "Cow", "hints": ["Farm", "Milk", "Nature"] }
+        { "word": "Cow", "hints": ["Farm", "Milk", "Nature"] },
+        { "word": "Flamingo", "hints": ["Pink", "One leg", "Bird"] },
+        { "word": "Penguin", "hints": ["Cold", "Waddles", "Black and white"] },
+        { "word": "Chameleon", "hints": ["Changes", "Slow", "Reptile"] },
+        { "word": "Bat", "hints": ["Night", "Flies", "Caves"] },
+        { "word": "Cheetah", "hints": ["Fastest", "Land", "Spotted"] },
+        { "word": "Jellyfish", "hints": ["Transparent", "Ocean", "Stings"] },
+        { "word": "Gorilla", "hints": ["Strong", "Forest", "Large primate"] },
+        { "word": "Panda", "hints": ["Black and white", "Bamboo", "China"] },
+        { "word": "Parrot", "hints": ["Talks", "Colorful", "Bird"] },
+        { "word": "Crab", "hints": ["Sideways", "Claws", "Shore"] },
+        { "word": "Fox", "hints": ["Cunning", "Orange", "Wild"] },
+        { "word": "Deer", "hints": ["Antlers", "Forest", "Gentle"] },
+        { "word": "Pigeon", "hints": ["City", "Grey", "Messenger"] },
+        { "word": "Octopus", "hints": ["Eight arms", "Ocean", "Ink"] },
+        { "word": "Hippo", "hints": ["Water", "Massive", "Africa"] },
+        { "word": "Zebra", "hints": ["Stripes", "Africa", "Horse-like"] }
       ]
     },
     {
@@ -103,7 +171,23 @@
         { "word": "Super Mario", "hints": ["Red", "Game", "Jump"] },
         { "word": "Barbie", "hints": ["Pink", "Doll", "Style"] },
         { "word": "Woody", "hints": ["Toy", "Sheriff", "Cowboy"] },
-        { "word": "Thanos", "hints": ["Purple", "Powerful", "Villain"] }
+        { "word": "Thanos", "hints": ["Purple", "Powerful", "Villain"] },
+        { "word": "Gollum", "hints": ["Precious", "Cave", "Skinny"] },
+        { "word": "Dumbledore", "hints": ["Wise", "Beard", "Magic"] },
+        { "word": "Captain Jack Sparrow", "hints": ["Pirate", "Rum", "Messy"] },
+        { "word": "Hermione", "hints": ["Books", "Smart", "Magic"] },
+        { "word": "Deadpool", "hints": ["Funny", "Red suit", "Regenerates"] },
+        { "word": "Black Panther", "hints": ["Africa", "King", "Vibranium"] },
+        { "word": "Moana", "hints": ["Ocean", "Island", "Girl"] },
+        { "word": "Minions", "hints": ["Yellow", "Small", "Goggle-wearing"] },
+        { "word": "Voldemort", "hints": ["Noseless", "Dark", "Feared"] },
+        { "word": "Forrest Gump", "hints": ["Running", "Bench", "Chocolate box"] },
+        { "word": "Pennywise", "hints": ["Clown", "Red balloon", "Sewer"] },
+        { "word": "Thor", "hints": ["Hammer", "Lightning", "Viking"] },
+        { "word": "Dracula", "hints": ["Night", "Blood", "Cape"] },
+        { "word": "Indiana Jones", "hints": ["Hat", "Whip", "Archaeologist"] },
+        { "word": "Mulan", "hints": ["Warrior", "China", "Disguise"] },
+        { "word": "James Bond", "hints": ["Spy", "Suit", "Gadgets"] }
       ]
     }
   ]
