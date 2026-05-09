@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { UserPlus, RotateCcw, Eye, Play, Plus, Minus, MessageSquare } from 'lucide-react';
 import wordData from './words.json';
 
@@ -57,10 +57,10 @@ export default function App() {
         let pickedMode = 'Normal';
         const modeDice = Math.random();
         if (toggles.troll && toggles.doppel) {
-            if (modeDice < 0.15) pickedMode = 'Troll';
-            else if (modeDice < 0.30) pickedMode = 'Doppelganger';
-        } else if (toggles.troll && modeDice < 0.25) pickedMode = 'Troll';
-        else if (toggles.doppel && modeDice < 0.25) pickedMode = 'Doppelganger';
+            if (modeDice < 0.05) pickedMode = 'Troll';
+            else if (modeDice < 0.10) pickedMode = 'Doppelganger';
+        } else if (toggles.troll && modeDice < 0.10) pickedMode = 'Troll';
+        else if (toggles.doppel && modeDice < 0.10) pickedMode = 'Doppelganger';
 
         // 2. Word Pick from Selected Categories
         const allWords = wordData.categories

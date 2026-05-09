@@ -39,6 +39,7 @@
         { "word": "Samosa", "hints": ["Triangular", "Fried", "Stuffed"] },
         { "word": "Popcorn", "hints": ["Cinema", "Pops", "Light"] },
         { "word": "Cheesecake", "hints": ["Creamy", "Dessert", "Baked"] }
+
       ]
     },
     {
@@ -73,7 +74,17 @@
         { "word": "කෙළි සෙල්ලම", "hints": ["Fun", "Childhood", "Group"] },
         { "word": "රාජකීය", "hints": ["Royal", "Heritage", "Grand"] },
         { "word": "Dambulla", "hints": ["Cave", "Paintings", "Buddhist"] },
-        { "word": "Nuwara Eliya", "hints": ["Cold", "Hills", "Tea country"] }
+        { "word": "Nuwara Eliya", "hints": ["Cold", "Hills", "Tea country"] },
+        { "word": "Kassapa", "hints": ["Osmo", "thuruliya", "Union place"] },
+        { "word": "තව්ව", "hints": ["Buwa", "කතා කරනවා", "Talking nonsense"] },
+        { "word": "බල්ලො", "hints": ["Group of guys", "Crew", "The boys"] },
+        { "word": "මොඩය", "hints": ["Not smart", "Classic insult", "Everyone knows one"] },
+        { "word": "ගෝනා", "hints": ["Stubborn", "Farm animal reference", "Calling someone dumb"] },
+        { "word": "ගොතය", "hints": ["Slow one", "Clueless", "Always confused"] },
+        { "word": "මූස්පෙත්තය", "hints": ["Snoop", "Nosy", "Always in your business"] },
+        { "word": "කෑල්ල", "hints": ["A scene", "Messy situation", "Drama"] },
+        { "word": "ටිකිරිලිය", "hints": ["Petite girl", "Young one", "Tiny troublemaker"] },
+
       ]
     },
     {
