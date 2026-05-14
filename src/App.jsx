@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { UserPlus, RotateCcw, Eye, Play, Plus, Minus, MessageSquare } from 'lucide-react';
 import wordData from './words.json';
 
@@ -83,29 +83,37 @@ export default function App() {
             specialPool = [...shuffleArray(stalePlayers), ...specialPool.filter(p => !stalePlayers.includes(p))];
         }
 
+        // Create a definitive list for role assignment to prevent mismatches
+        const combinedPool = [...specialPool, ...shuffleArray([...lockedPlayers])];
+
         const starter = players[Math.floor(Math.random() * players.length)];
+        // Initialize everyone as Citizen with the Secret Word
         let roles = players.map(name => ({ name, role: 'Citizen', word: secret.word, hint: null }));
         let currentRoundSpecials = [];
 
         // Assign Imposters
         for (let i = 0; i < imposterCount; i++) {
-            const name = specialPool[i] || lockedPlayers[i];
+            const name = combinedPool[i];
             currentRoundSpecials.push(name);
             const idx = roles.findIndex(r => r.name === name);
-            const rHint = secret.hints[Math.floor(Math.random() * secret.hints.length)];
-            roles[idx].role = 'Imposter';
-            roles[idx].word = '???';
-            roles[idx].hint = toggles.hints ? rHint : null;
+            if (idx !== -1) {
+                const rHint = secret.hints[Math.floor(Math.random() * secret.hints.length)];
+                roles[idx].role = 'Imposter';
+                roles[idx].word = '???';
+                roles[idx].hint = toggles.hints ? rHint : null;
+            }
         }
 
         // Assign Jester
         if (toggles.jester) {
-            const name = specialPool[imposterCount] || lockedPlayers[imposterCount];
+            const name = combinedPool[imposterCount];
             currentRoundSpecials.push(name);
             const idx = roles.findIndex(r => r.name === name);
-            roles[idx].role = 'Jester';
-            roles[idx].word = '???';
-            roles[idx].hint = "Try to get voted out!";
+            if (idx !== -1) {
+                roles[idx].role = 'Jester';
+                // Jester keeps the secret.word assigned during initialization
+                roles[idx].hint = "Try to get voted out!";
+            }
         }
 
         // Update Trackers
@@ -218,7 +226,6 @@ export default function App() {
                 </div>
             )}
 
-            {/* ... rest of the pass/discussion screens remain exactly as they were ... */}
             {screen === 'pass' && (
                 <div className="h-screen flex flex-col items-center justify-center p-6 text-center space-y-8 select-none touch-none relative z-10">
                     <div className="space-y-2">
